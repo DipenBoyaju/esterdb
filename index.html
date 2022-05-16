@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- style-link -->
+	<link rel="stylesheet" type="text/css" href="css/nav-style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- tab-icon -->
+	<link href="img/fa-icon.png" rel="shortcut icon"> 
+	<title>ESTER NEPAL</title>
+</head>
+
+<body class="hero-anime"> 
+  	<div class="navigation-wrap start-header start-style">
+	    <div class="nav-block">
+	      	<div class="row">
+	        	<div class="col-12">
+	          		<nav class="navbar navbar-expand-md navbar-light">
+            			<a class="navbar-brand" href="index.html" target=""><img src="img/logo.png" alt=""></a> 
+			            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			              <span class="navbar-toggler-icon"></span>
+			            </button>
+            
+			            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			              	<ul class="navbar-nav ml-auto py-4 py-md-0">
+				                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+				                  	<a class="nav-link" href="#">Home</a>
+				                </li>
+				                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+				                  	<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+				                  	<div class="dropdown-menu">
+					                    <a class="dropdown-item" href="#">Vision</a>
+					                    <a class="dropdown-item" href="#">Mission</a>
+					                    <a class="dropdown-item" href="#">History</a>
+					                    <a class="dropdown-item" href="#">Team</a>
+				                  	</div>
+				                </li>	
+				                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+				                  <a class="nav-link" href="#">Programs & Avtivities</a>
+				                </li>
+				                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+				                  	<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Department</a>
+				                  	<div class="dropdown-menu">
+					                    <a class="dropdown-item" href="#">ESTER Academy</a>
+					                    <a class="dropdown-item" href="#">Research & Development</a>
+					                    <a class="dropdown-item" href="#">Enterpreneurship & Personal Development</a>
+					                    <a class="dropdown-item" href="#">Another action</a>
+				                  	</div>
+				                </li>
+				                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+				                  	<a class="nav-link" href="#">Service</a>
+				                </li>
+				                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+				                  	<a class="nav-link" href="#">Blog</a>
+				                </li>
+				                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+				                  	<a class="nav-link" href="#">Notice</a>
+				                </li>
+				                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+				                  	<a class="nav-link" href="#">Contact</a>
+				                </li>
+              				</ul>
+            			</div> 
+          			</nav>    
+        		</div>
+      		</div>
+    	</div>
+  	</div>
+  	<section class="banner">
+  	</section>
+	<div class="my-5 py-5"></div>
+</body>    
+
+<!-- js-links -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- bootstrap-js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+(function($) { "use strict";
+    $(function() {
+      var header = $(".start-style");
+      $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+      
+        if (scroll >= 10) {
+          header.removeClass('start-style').addClass("scroll-on");
+        } else {
+          header.removeClass("scroll-on").addClass('start-style');
+        }
+      });
+    });   
+  
+  //Animation
+
+  $(document).ready(function() {
+    $('body.hero-anime').removeClass('hero-anime');
+  });
+
+  //Menu On Hover
+    
+  $('body').on('mouseenter mouseleave','.nav-item',function(e){
+      if ($(window).width() > 750) {
+        var _d=$(e.target).closest('.nav-item');_d.addClass('show');
+        setTimeout(function(){
+        _d[_d.is(':hover')?'addClass':'removeClass']('show');
+        },1);
+      }
+  });  
+
+})(jQuery); 
+    </script>
+  </body>
+</html>
