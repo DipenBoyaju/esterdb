@@ -97,29 +97,39 @@ body{
     background: rgba(0, 0, 0, .5);
 }
 .blog-banner .blog-banner-content,
-.contact-banner .contact-banner-content {
+.contact-banner .contact-banner-content,
+.notice-banner .notice-banner-content,
+.service-banner .service-banner-content {
 	padding-top: 12rem;
 	color: #fff;
 }
 .blog-banner .blog-banner-content h1,
-.contact-banner .contact-banner-content h1 {
+.contact-banner .contact-banner-content h1,
+.notice-banner .notice-banner-content h1,
+.service-banner .service-banner-content h1{
 	font-size: 3rem;
 	font-weight: 600;
 	margin-bottom: 15px;
 }
 .blog-banner-content .breadcrumb-block .breadcrumb,
-.contact-banner-content .breadcrumb-block .breadcrumb {
+.contact-banner-content .breadcrumb-block .breadcrumb,
+.notice-banner-content .breadcrumb-block .breadcrumb,
+.service-banner-content .breadcrumb-block .breadcrumb {
 	background: transparent;
 	margin-top: 20px;
 	padding: 0;
 	text-transform: uppercase;
 }
-.blog-banner-content .breadcrumb-block .breadcrumb a {
+.blog-banner-content .breadcrumb-block .breadcrumb a,
+.notice-banner-content .breadcrumb-block .breadcrumb a,
+.service-banner-content .breadcrumb-block .breadcrumb a {
 	color: #fff;
 	font-size: 14px;
 }
 .blog-banner-content .breadcrumb-block .breadcrumb a:hover,
-.contact-banner-content .breadcrumb-block .breadcrumb a:hover {
+.contact-banner-content .breadcrumb-block .breadcrumb a:hover,
+.notice-banner-content .breadcrumb-block .breadcrumb a:hover,
+.service-banner-content .breadcrumb-block .breadcrumb a:hover {
 	color: rgb(206, 204, 204);
 	transition: all 0.4s ease-in-out;
 }
@@ -230,9 +240,12 @@ body{
 	position: relative;
 	z-index: 2;
 	width: 100%;
-	height: 500px;
+	height: 400px;
 	font-family: 'Josefin Sans', sans-serif;
 	line-height: 30px;
+}
+.contact-banner .breadcrumb-block .breadcrumb {
+	display: inline-flex !important;
 }
 .contact-banner .contact-banner-content {
 	text-align: center;
@@ -242,4 +255,142 @@ body{
 	color: #55565b;
 	font-size: 16px;
 	font-weight: 500;
+}
+.contact-block {
+	padding: 90px 0;
+}
+.contact-block .contact-title h6 {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 2px;
+	padding-bottom: 20px;
+}
+.contact-content .form-control {
+    border: 0.1429rem solid #f1f1f1;
+    font: 1.125rem/2rem 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 0 0.9375rem;
+    background: none;
+    letter-spacing: .2429rem;
+    border-radius: 0;
+    color: #55565b;
+    font-weight: 400;
+    height: 3.125rem;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+	margin: 20px 0;
+}
+::placeholder{
+	text-transform: uppercase;
+	font-size: 0.85rem;
+	font-weight: 500;
+}
+.contact-content textarea.form-control {
+    padding-top: 1rem;
+    padding-bottom: 0.7143rem;
+    min-height: 180px;
+}
+.contact-content .contact-form button {
+	padding: 10px 20px;
+	text-transform: uppercase;
+	outline: none;
+	border: none;
+	border-radius: 1px;
+	letter-spacing: 5px;
+}
+.contact-detail .contact-detail-lists .icon-block i {
+	font-size: 4rem;
+	margin-bottom: 30px;
+}
+.contact-detail .contact-detail-lists .text-block {
+	font-size: 1rem;
+	font-weight: 500;
+}
+.contact-detail .social-media .media-title h6{
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+.contact-detail .social-media .media-list {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 2.5rem;
+}
+.contact-detail .social-media .media-list .media {
+	margin-right: 30px;
+}
+.contact-detail .social-media .media-list .media a {
+	color: #55565b;
+	transition: all .3s linear;
+}
+.contact-detail .social-media .media-list .media .facebook:hover{
+	color: #1877f2;
+	transition: all .3s linear;
+}
+.contact-detail .social-media .media-list .media .instagram:hover{
+	color: #e1306c;
+	transition: all .3s linear;
+}
+.contact-detail .social-media .media-list .media .twitter:hover{
+	color: #1da1f2;
+	transition: all .3s linear;
+}
+.contact-detail .social-media .media-list .media .tiktok:hover{
+	color: #25F4EE;
+	transition: all .3s linear;
+}
+.contact-detail .social-media .media-list .media .youtube:hover{
+	color: #ff0000;
+	transition: all .3s linear;
+}
+.contact-detail .social-media .media-list .media .messenger:hover{
+	color: #0084ff;
+	transition: all .3s linear;
+}
+.contact-detail .social-media .media-list .media .whatsapp:hover{
+	color: #075e54;
+	transition: all .3s linear;
+}
+/* map */
+.mapouter{
+	position:relative;
+	text-align:right;
+	width:100%;
+	height:400px;
+}
+.gmap_canvas {
+	overflow:hidden;
+	background:none!important;
+	width:100%;
+	height:500px;
+}
+.gmap_iframe {
+	height:400px!important;
+}
+
+/* notice */
+.notice-banner {
+	background-image: url('http://placehold.jp/35/45464a/ffffff/1050x500.png?text=ESTER%20NEPAL');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: 500px;
+	font-family: 'Josefin Sans', sans-serif;
+	line-height: 30px;
+}
+
+/* service */
+.service-banner {
+	background-image: url('http://placehold.jp/35/45464a/ffffff/1050x500.png?text=ESTER%20NEPAL');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: 500px;
+	font-family: 'Josefin Sans', sans-serif;
+	line-height: 30px;
 }
