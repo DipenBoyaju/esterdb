@@ -99,14 +99,18 @@ body{
 .blog-banner .blog-banner-content,
 .contact-banner .contact-banner-content,
 .notice-banner .notice-banner-content,
-.service-banner .service-banner-content {
+.service-banner .service-banner-content,
+.team-banner .team-banner-content,
+.program-banner .program-banner-content {
 	padding-top: 12rem;
 	color: #fff;
 }
 .blog-banner .blog-banner-content h1,
 .contact-banner .contact-banner-content h1,
+.service-banner .service-banner-content h1,
 .notice-banner .notice-banner-content h1,
-.service-banner .service-banner-content h1{
+.team-banner .team-banner-content h1,
+.program-banner .program-banner-content h1{
 	font-size: 3rem;
 	font-weight: 600;
 	margin-bottom: 15px;
@@ -114,7 +118,9 @@ body{
 .blog-banner-content .breadcrumb-block .breadcrumb,
 .contact-banner-content .breadcrumb-block .breadcrumb,
 .notice-banner-content .breadcrumb-block .breadcrumb,
-.service-banner-content .breadcrumb-block .breadcrumb {
+.service-banner-content .breadcrumb-block .breadcrumb,
+.team-banner-content .breadcrumb-block .breadcrumb,
+.program-banner-content .breadcrumb-block .breadcrumb {
 	background: transparent;
 	margin-top: 20px;
 	padding: 0;
@@ -122,14 +128,18 @@ body{
 }
 .blog-banner-content .breadcrumb-block .breadcrumb a,
 .notice-banner-content .breadcrumb-block .breadcrumb a,
-.service-banner-content .breadcrumb-block .breadcrumb a {
+.service-banner-content .breadcrumb-block .breadcrumb a,
+.team-banner-content .breadcrumb-block .breadcrumb a,
+.program-banner-content .breadcrumb-block .breadcrumb a {
 	color: #fff;
 	font-size: 14px;
 }
 .blog-banner-content .breadcrumb-block .breadcrumb a:hover,
 .contact-banner-content .breadcrumb-block .breadcrumb a:hover,
 .notice-banner-content .breadcrumb-block .breadcrumb a:hover,
-.service-banner-content .breadcrumb-block .breadcrumb a:hover {
+.service-banner-content .breadcrumb-block .breadcrumb a:hover,
+.team-banner-content .breadcrumb-block .breadcrumb a:hover,
+.program-banner-content .breadcrumb-block .breadcrumb a:hover {
 	color: rgb(206, 204, 204);
 	transition: all 0.4s ease-in-out;
 }
@@ -228,7 +238,6 @@ body{
 	-moz-filter: grayscale(100%);
 	-ms-filter: grayscale(100%);
 	-o-filter: grayscale(100%);
-	-webkit-backface-visibility: visible;
 }
 
 /* CONTACT PAGE */
@@ -297,6 +306,12 @@ body{
 	border: none;
 	border-radius: 1px;
 	letter-spacing: 5px;
+	background-color: #212121;
+	transition: all .3s linear;
+}
+.contact-content .contact-form button:hover{
+	background-color: #3f3f3f;
+	transition: all .3s linear;
 }
 .contact-detail .contact-detail-lists .icon-block i {
 	font-size: 4rem;
@@ -369,6 +384,196 @@ body{
 	height:400px!important;
 }
 
+/* program */
+.program-banner {
+	background-image: url('http://placehold.jp/35/45464a/ffffff/1050x500.png?text=ESTER%20NEPAL');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: 500px;
+	font-family: 'Josefin Sans', sans-serif;
+	line-height: 30px;
+}
+.program-block {
+	padding: 90px 0;
+}
+.program-info {
+	padding: 90px 0;
+}
+.program-info .program-title,
+.program-block .program-title,
+.events .program-title{
+	text-align: center;
+	letter-spacing: 2px;
+}
+.program-info .program-title h2,
+.program-block .program-title h2,
+.events .program-title h2 {
+	font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+.program-info .program-img {
+	max-height: 550px;
+	overflow: hidden;
+}
+.program-info .program-img img {
+	width: 100%;
+	height: 100%;
+	padding-top: 30px;
+}
+.program-block .program-title img,
+.events .program-title img {
+	padding: 20px 0;
+}
+.program-block .catt-block .controls {
+	margin-bottom: 60px;
+	text-align: center;
+}
+.program-block .catt-block .control {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    color: #55565b;
+    transition: background 150ms;
+	font-size: 1rem;
+	font-weight: 500;
+	border: 1px solid #3f3f3f;
+	border-radius: 2px;
+	outline: none;
+	margin-bottom: 10px;
+	background-color: #fff;
+	transition: all .3s linear;
+	letter-spacing: 1px;
+}
+.program-block .catt-block .control:hover {
+    background: #3f3f3f;
+	color: #f1f1f1;
+	transition: all .3s linear;
+}
+.program-block .catt-block .mixitup-control-active {
+    background: #3f3f3f;
+	color: #f1f1f1;
+	border: 1px solid #3f3f3f;
+	outline: none;
+}
+.program-block .catt-block .mixitup-control-active[data-filter]:after {
+    background: transparent;
+}
+.program-block .catt-list-block {
+	text-align: center;
+}
+.program-block .catt-list-block .mix {
+    display: inline-block;
+    position: relative;
+}
+.mix {
+    width: calc(100%/2 - (((2 - 1) * 1rem) / 2));
+}
+.catt-list-block .catt-item {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+.catt-list-block .catt-item .content-overlay {
+	background: rgba(0,0,0,0.7);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+}
+.catt-list-block .catt-item:hover .content-overlay{
+	opacity: 1;
+}
+.catt-list-block .catt-item img {
+	  width: 100%;
+}
+.catt-list-block .catt-item .content-details {
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+.catt-list-block .catt-item:hover .content-details{
+	top: 50%;
+	left: 50%;
+	opacity: 1;
+}
+.catt-list-block .catt-item:hover .catt-item img {
+	transform: scale(1.32);
+}
+.catt-list-block .catt-item .content-details h4{
+	color: #fff;
+	font-weight: 400;
+	letter-spacing: 0.15em;
+	margin-bottom: 0.5em;
+}
+.catt-list-block .catt-item .content-details p{
+	color: #fff;
+	font-size: 0.8em;
+}
+.catt-list-block .fadeIn-bottom{
+	top: 80%;
+}
+.events .uk-position-relative img {
+	width: 100%;
+	height: 100%;
+}
+.events .uk-light .uk-panel {
+	text-align: left;
+}
+.events .uk-light .uk-panel h4 {
+	font-size: 1rem;
+	padding: 20px 0;
+}
+.events .uk-light .uk-panel .date2 p {
+	text-transform: uppercase;
+	color: #f1f1f1;
+	font-weight: 400;
+	letter-spacing: 1px;
+	background-color: #212121;
+	padding: 5px 10px;
+	bottom: 0;
+	font-size: .8rem;
+	text-align: center;
+}
+.uk-light .uk-slidenav {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 10px 15px;
+}
+
+/* team */
+.team-banner {
+	background-image: url('http://placehold.jp/35/45464a/ffffff/1050x500.png?text=ESTER%20NEPAL');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: 500px;
+	font-family: 'Josefin Sans', sans-serif;
+	line-height: 30px;
+}
 /* notice */
 .notice-banner {
 	background-image: url('http://placehold.jp/35/45464a/ffffff/1050x500.png?text=ESTER%20NEPAL');
@@ -393,4 +598,89 @@ body{
 	height: 500px;
 	font-family: 'Josefin Sans', sans-serif;
 	line-height: 30px;
+}
+.service-block {
+	padding: 100px 0;
+}
+.service-block .service-content .service-title {
+	padding: 90px 0 60px 0;
+}
+.service-block .service-content .service-title h2 {
+	text-transform: uppercase;
+	font-size: 4rem;
+	font-weight: 600;
+}
+.service-block .service-content .service-title p{
+	font-weight: 300;
+	font-size: 2rem;
+	text-transform: uppercase;
+	font-family: 'Josefin Sans', sans-serif;
+	line-height: 2px;
+}
+.service-block .service-content .service-item {
+	padding: 30px;
+	text-align: justify;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+	letter-spacing: 1px;
+	border-radius: 1px;
+	margin: 30px 0;
+}
+.service-block .service-content .service-item h3{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.3rem;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.service-block .service-content .service-item a {
+	background-color: transparent;
+	border: 1px solid #212121;
+	font-size: 1rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #3f3f3f;
+	border-radius: 1px;
+	transition: all .3s linear;
+	cursor: pointer;
+}
+.service-block .service-content .service-item a:hover {
+	background-color: #212121;
+	color: #f1f1f1;
+	transition: all .3s linear;
+}
+.service-quote {
+	padding: 90px 0;
+	background-image: url(https://images.pexels.com/photos/3727456/pexels-photo-3727456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-attachment: fixed;
+	overflow: hidden;
+	ffilter: grayscale(100%);
+}
+.service-quote .quote-detail {
+	text-align: center;
+	color: #f8f8f8;
+}
+.service-quote .quote-detail p{
+	text-transform: uppercase;
+	font-size: 1.8rem;
+	font-weight: 400;
+	letter-spacing: 1.5px;
+}
+.service-quote .quote-detail h2{
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 700;
+	letter-spacing: 2px;
+	font-size: 3rem;
+	margin-bottom: 60px;
+}
+.service-quote .quote-detail a {
+	font-size: 1.6rem;
+	font-weight: 400;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background-color: #3f3f3f;
+	color: #f1f1f1;
+	padding: 15px 60px;
+	border-radius: 1px;
 }

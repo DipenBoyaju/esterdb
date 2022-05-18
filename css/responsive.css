@@ -1,0 +1,17 @@
+@media screen and (min-width: 541px) {
+    .mix {
+        width: calc(100%/3 - (((3 - 1) * 1rem) / 3));
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .mix{
+        width: calc(100%/4 - (((4 - 1) * 1rem) / 4));
+    }
+}
+
+@media screen and (min-width: 1281px) {
+    .mix {
+        width: calc(100%/3 - (((3 - 1) * 1rem) / 3));
+    }
+}
