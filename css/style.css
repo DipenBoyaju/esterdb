@@ -17,7 +17,12 @@ body{
 }
 
 /* --------------------------- */
-.banner,
+
+.banner video {
+	top: 0;
+	left: 0;
+	width: 100%;
+}
 .blog-banner {
 	background-image: url('http://placehold.jp/35/45464a/ffffff/1050x500.png?text=ESTER%20NEPAL');
 	background-size: cover;
@@ -28,10 +33,12 @@ body{
 	height: 800px;
 }
 
+/* index-about */
 .about-block .row{
 	padding: 80px 0;
 }
-.about-block h2 {
+.about-block h2,
+.sub-service h2 {
 	font-family: 'Josefin Sans', sans-serif;
 	text-transform: uppercase;
 	font-size: 35px;
@@ -40,15 +47,61 @@ body{
 .about-block .text-wrap {
 	padding: 15% 0 0 15%;
 }
+.about-block .text-wrap .btn,
+.sub-service .main-title .btn{
+	padding: 10px 20px;
+	background-color: transparent;
+	color: #f8f8f8;
+	border-radius: 1px;
+	overflow: hidden;
+	border: 2px solid #212121;
+	color: #212121;
+	font-weight: 500;
+	text-transform: uppercase;
+	transform-style: preserve-3d;
+}
+.about-block .text-wrap .btn:before,
+.about-block .text-wrap .btn:after,
+.sub-service .main-title .btn:before,
+.sub-service .main-title .btn:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	background: #212121;
+	z-index: -1;
+	transform: translate3D(0,-100%,0); /* move elements above button so they don't appear initially */
+	transition: all .5s;
+	transform-origin: center center;
+	transform: scale(1,0);
+}
+.about-block .text-wrap .btn:hover,
+.sub-service .main-title .btn:hover{
+  color: white;
+}
+.about-block .text-wrap .btn:hover:before,
+.about-block .text-wrap .btn:hover:after,
+.sub-service .main-title .btn:hover:before,
+.sub-service .main-title .btn:hover:after{
+	transform: scale(1);
+	border-radius: 0;
+}
 .about-block .img-right{
 	padding-right: 0;
 }
 .about-block .img-left{
 	padding-left: 0;
 } 
+.about-block .img-wrap {
+	height: 500px;
+}
 .about-block .img-wrap img {
 	width: 100%;
 	border-radius: 80% 0 0 90%;
+	height: 100%;
 }
 .about-block .img-left .img-wrap img {
 	border-radius: 0 80% 90% 0;
@@ -57,27 +110,87 @@ body{
 	right: 0;
 }
 
-/* footer */
-.footer {
-	background: #212121;
-	height: 300px;
-}
-.footer svg {
+/* company-quote */
+.company-quote {
+	background-image: url('http://placehold.jp/35/45464a/ffffff/1050x500.png?text=ESTER%20NEPAL');
+	background-size: cover;
+	background-position: center;
 	position: relative;
 	z-index: 2;
 	width: 100%;
-	bottom: 0;
+	height: 500px;
 }
-.footer .footer-block {
-	padding-top: 60px;
+
+/* index-service */
+.sub-service .service-catt {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 2rem;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+.sub-service .main-title {
+	margin-top: 20%;
+}
+.sub-service .service-catt .serv {
+	text-align: justify;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+	letter-spacing: 1px;
+	border-radius: 1px;
+}
+.sub-service .service-catt .serv .serv-title {
+	text-align: left;
+	color: #f1f1f1;
+	margin-top: -45px;
+}
+.sub-service .serv-title h5 {
+	background-color: #212121;
+	padding: 10px 20px;
+	position: relative;
+	border-radius: 0 50px 0 0;
+	font-weight: 400;
+}
+.sub-service .service-catt .serv .serv-content {
+	padding: 15px 30px;
+}
+.sub-service .service-catt .serv img {
+	width: 100%;
+}
+/* footer */
+.footer {
+	background: #212121;
+}
+.footer .footer-top {
+	padding: 90px 0;
+}
+.footer-block ul {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.footer-block .quick-links ul li a{
+	font-family: 'Josefin' sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	padding-right: 1rem;
+	color: #7d7d7d;
+	font-weight: 500;
+}
+.footer-block .media-icons ul li a {
+	font-size: 2rem;
+	padding-right: 1.1rem;
+	color: #7d7d7d;
 }
 .footer .copyright {
 	text-align: center;
 	bottom: 0;
 	color: rgb(182, 182, 182);
+	padding-bottom: 30px;
 }
-.footer img {
-	width: 100%;
+.footer .copyright p {
+	margin-bottom: 0;
+	font-weight: 500;
 }
 
 /* BLOG PAGE */
@@ -339,11 +452,13 @@ body{
 	color: #55565b;
 	transition: all .3s linear;
 }
-.contact-detail .social-media .media-list .media .facebook:hover{
+.contact-detail .social-media .media-list .media .facebook:hover,
+.footer .media-icons .media-list .media .facebook:hover{
 	color: #1877f2;
 	transition: all .3s linear;
 }
-.contact-detail .social-media .media-list .media .instagram:hover{
+.contact-detail .social-media .media-list .media .instagram:hover,
+.footer .media-icons .media-list .media .instagram:hover{
 	color: #e1306c;
 	transition: all .3s linear;
 }
@@ -355,15 +470,18 @@ body{
 	color: #25F4EE;
 	transition: all .3s linear;
 }
-.contact-detail .social-media .media-list .media .youtube:hover{
+.contact-detail .social-media .media-list .media .youtube:hover,
+.footer .media-icons .media-list .media .youtube:hover{
 	color: #ff0000;
 	transition: all .3s linear;
 }
-.contact-detail .social-media .media-list .media .messenger:hover{
+.contact-detail .social-media .media-list .media .messenger:hover,
+.footer .media-icons .media-list .media .messenger:hover{
 	color: #0084ff;
 	transition: all .3s linear;
 }
-.contact-detail .social-media .media-list .media .whatsapp:hover{
+.contact-detail .social-media .media-list .media .whatsapp:hover,
+.footer .media-icons .media-list .media .whatsapp:hover{
 	color: #075e54;
 	transition: all .3s linear;
 }

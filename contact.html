@@ -12,7 +12,7 @@
 	<!-- tab-icon -->
 	<link href="img/fa-icon.png" rel="shortcut icon"> 
 	<!-- font-icons -->
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link media="all" rel="stylesheet" href="font-awesome/css/font-awesome.css">
 	<link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
 	<title>ESTER NEPAL</title>
 </head>
@@ -27,7 +27,7 @@
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
-	
+
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
 							<ul class="navbar-nav ml-auto py-4 py-md-0">
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
@@ -55,7 +55,7 @@
 									</div>
 								</li>
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="#">Service</a>
+									<a class="nav-link" href="service.html">Service</a>
 								</li>
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
 									<a class="nav-link" href="blog.html">Blog</a>
@@ -94,7 +94,7 @@
 	</section>
 
 	<section class="contact-block">
-        <div class="container">
+    <div class="container">
 			<div class="contact-content">
 				<div class="row">
 					<div class="col-lg-6">
@@ -173,8 +173,8 @@
 					</div>
 				</div>
 			</div>
-        </div>
-    </section>
+    </div>
+	</section>
 
 	<section class="location-map">
 		<div class="map-frame">
@@ -185,33 +185,45 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<footer class="footer">
-		<div class="container">
-			<div class="footer-block">
+	<div class="container">
+		<div class="footer-block">
+			<div class="footer-top">
 				<div class="row">
 					<div class="col-lg-3 col-md-3">
-						<p>sdfg</p>
+						<p>ESTER</p>
 					</div>
-					<div class="col-lg-4 col-md-4">
-					  <h6>Explore</h6>
-						<ul>
-							<li>about</li>
-							<li>home</li>
-							<li>service</li>
-							<li>blogs</li>
-						</ul>
+					<div class="col-lg-6 col-md-4">
+						<div class="quick-links">
+							<ul>
+								<li><a href="">Vision</a></li>
+								<li><a href="">Mission</a></li>
+								<li><a href="">Team</a></li>
+								<li><a href="">Works</a></li>
+								<li><a href="">Services</a></li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div class="copyright">
-					<p>©2022 ESTER. All Rights Reserved.</p>
-				</div>
+					<div class="col-lg-3 col-md-3">
+						<div class="media-icons">
+							<ul class="media-list">
+								<li class="media"><a class="facebook" href=""><i class="lni lni-facebook-original"></i></a></li>
+								<li class="media"><a class="instagram" href=""><i class="lni lni-instagram-filled"></i></a></li>
+								<li class="media"><a class="youtube" href=""><i class="lni lni-youtube"></i></a></li>
+								<li class="media"><a class="messenger" href=""><i class="lni lni-facebook-messenger"></i></a></li>
+								<li class="media"><a class="whatsapp" href=""><i class="lni lni-whatsapp"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="copyright">
+				<p>Copyright © 2022 ESTER. All Rights Reserved.</p>
 			</div>
 		</div>
-		<!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">-->
-			<path fill="#121212" fill-opacity="1" d="M0,224L24,192C48,160,96,96,144,85.3C192,75,240,117,288,133.3C336,149,384,139,432,160C480,181,528,235,576,234.7C624,235,672,181,720,160C768,139,816,149,864,170.7C912,192,960,224,1008,229.3C1056,235,1104,213,1152,202.7C1200,192,1248,192,1296,208C1344,224,1392,256,1416,272L1440,288L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path>
-	  </svg>
-	</footer>
+	</div>
+</footer>
 
 <!-- js-links -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -222,27 +234,27 @@
 
 <script type="text/javascript">
 (function($) { "use strict";
-  $(function() {
-		var header = $(".start-style");
-		$(window).scroll(function() {    
-		  scroll = $(window).scrollTop();
-		  if (scroll >= 10) {
-				header.removeClass('start-style').addClass("scroll-on");
-		  } else {
-				header.removeClass("scroll-on").addClass('start-style');
-		  }
-		});
-  });  
-
-  //Menu On Hover
-	$('body').on('mouseenter mouseleave','.nav-item',function(e){
-		if ($(window).width() > 750) {
-		  var _d=$(e.target).closest('.nav-item');_d.addClass('show');
-		  setTimeout(function(){
-		  _d[_d.is(':hover')?'addClass':'removeClass']('show');
-		  },1);
-		}
+    $(function() {
+      	var header = $(".start-style");
+  		$(window).scroll(function() {    
+    		scroll = $(window).scrollTop();
+    		if (scroll >= 10) {
+      			header.removeClass('start-style').addClass("scroll-on");
+    		} else {
+      			header.removeClass("scroll-on").addClass('start-style');
+    		}
+  		});
 	});  
+
+	//Menu On Hover
+  	$('body').on('mouseenter mouseleave','.nav-item',function(e){
+      	if ($(window).width() > 750) {
+        	var _d=$(e.target).closest('.nav-item');_d.addClass('show');
+        	setTimeout(function(){
+        	_d[_d.is(':hover')?'addClass':'removeClass']('show');
+        	},1);
+      	}
+  	});  
 })(jQuery); 
 </script>
 </body>
