@@ -23,6 +23,16 @@ body{
 	left: 0;
 	width: 100%;
 }
+.banner .banner-text {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 10%;
+	font-family: 'Josefin' sans-serif;
+	font-weight: 700;
+	font-size: 3.2rem;
+	color: #fff;
+}
 .blog-banner {
 	background-image: url('http://placehold.jp/35/45464a/ffffff/1050x500.png?text=ESTER%20NEPAL');
 	background-size: cover;
@@ -35,7 +45,7 @@ body{
 
 /* index-about */
 .about-block .row{
-	padding: 80px 0;
+	padding: 60px 0;
 }
 .about-block h2,
 .sub-service h2 {
@@ -45,10 +55,16 @@ body{
 	font-weight: 700;
 }
 .about-block .text-wrap {
-	padding: 15% 0 0 15%;
+	padding: 20% 0 0 15%;
+}
+.about-block .text-wrap p {
+	letter-spacing: 1.5px;
+	font-size: 1.1rem;
+	padding-top: 20px;
 }
 .about-block .text-wrap .btn,
-.sub-service .main-title .btn{
+.sub-service .btn,
+.vision-block .vision-content .btn{
 	padding: 10px 20px;
 	background-color: transparent;
 	color: #f8f8f8;
@@ -62,8 +78,10 @@ body{
 }
 .about-block .text-wrap .btn:before,
 .about-block .text-wrap .btn:after,
-.sub-service .main-title .btn:before,
-.sub-service .main-title .btn:after{
+.sub-service .btn:before,
+.sub-service .main-title .btn:after,
+.vision-block .vision-content .btn:before,
+.vision-block .vision-content .btn:after{
 	content: '';
 	position: absolute;
 	left: 0;
@@ -79,22 +97,22 @@ body{
 	transform: scale(1,0);
 }
 .about-block .text-wrap .btn:hover,
-.sub-service .main-title .btn:hover{
+.sub-service .btn:hover,
+.vision-block .vision-content .btn:hover{
   color: white;
 }
 .about-block .text-wrap .btn:hover:before,
 .about-block .text-wrap .btn:hover:after,
-.sub-service .main-title .btn:hover:before,
-.sub-service .main-title .btn:hover:after{
+.sub-service .btn:hover:before,
+.sub-service .btn:hover:after,
+.vision-block .vision-content .btn:hover:before,
+.vision-block .vision-content .btn:hover:after{
 	transform: scale(1);
 	border-radius: 0;
 }
 .about-block .img-right{
 	padding-right: 0;
 }
-.about-block .img-left{
-	padding-left: 0;
-} 
 .about-block .img-wrap {
 	height: 500px;
 }
@@ -103,12 +121,10 @@ body{
 	border-radius: 80% 0 0 90%;
 	height: 100%;
 }
-.about-block .img-left .img-wrap img {
-	border-radius: 0 80% 90% 0;
-}
 .about-block .text-lg-right {
 	right: 0;
 }
+
 
 /* company-quote */
 .company-quote {
@@ -144,7 +160,7 @@ body{
 	margin-top: -45px;
 }
 .sub-service .serv-title h5 {
-	background-color: #212121;
+	background-color: rgba(0, 0, 0, 0.5);
 	padding: 10px 20px;
 	position: relative;
 	border-radius: 0 50px 0 0;
@@ -155,6 +171,7 @@ body{
 }
 .sub-service .service-catt .serv img {
 	width: 100%;
+	height: 200px;
 }
 /* footer */
 .footer {
@@ -177,6 +194,9 @@ body{
 	color: #7d7d7d;
 	font-weight: 500;
 }
+.footer-block .quick-links ul li a:hover{
+	color: #8167a9;
+}
 .footer-block .media-icons ul li a {
 	font-size: 2rem;
 	padding-right: 1.1rem;
@@ -193,6 +213,80 @@ body{
 	font-weight: 500;
 }
 
+/* vission */
+.vision .vision-title h1{
+	font-size: 3rem;
+	font-weight: 600;
+	font-family: 'Josefin Sans', sans-serif;
+}
+.vision-block h3,
+.mission-block h3 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 35;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.vision-block .vision-detail {
+	text-align: center;
+}
+.vision-block p {
+	font-size: 1.3rem;
+	font-weight: 400;
+	letter-spacing: 1px;
+	background-color: #3a48a9;
+	color: #fff;
+	box-shadow: 2px 3px 5px #212121;
+	padding: 20px;
+	border-radius: 50px;
+	text-transform: uppercase;
+	margin-top: 30px;
+}
+.vision-block .vision-detail i {
+	top: 0;
+	font-size: 1rem;
+	margin-top: -10px;
+}
+.vision-block .vision-content {
+	letter-spacing: 2px;
+	z-index: 1;
+	padding: 90px 0;
+}
+.mission-block {
+	padding: 60px 0
+}
+.mission-block .mission-detail {
+	margin: 0 0 0 30%;
+	position: absolute;
+	background-color: rgba(58 72 169 /80%);
+	padding: 30px;
+	color: #fff;
+}
+.mission-block .mission-detail ul li {
+	margin-top: 10px;
+}
+.mission-block .mission-detail .minum{ 
+	background-color: #131f74;
+	font-size: 2rem;
+	color: #fff;
+	font-weight: 600;
+	width: 50px;
+	margin-top: 10px;
+	text-align: center;
+	border-radius: 5px;
+	margin-top: 0;
+}
+.mission-block .mission-detail p {
+	font-size: 1rem;
+	letter-spacing: 1px;
+	font-weight: 500;
+	text-align: justify;
+}
+.mission-block .mission-detail .row {
+	margin-right: 0;
+}
+.mission-block .mission-bg img {
+	width: 60%;
+}
 /* BLOG PAGE */
 /* blog-block */
 .blog-banner {
@@ -211,29 +305,35 @@ body{
 }
 .blog-banner .blog-banner-content,
 .contact-banner .contact-banner-content,
+.vision-banner .vision-banner-content,
 .notice-banner .notice-banner-content,
 .service-banner .service-banner-content,
 .team-banner .team-banner-content,
-.program-banner .program-banner-content {
+.program-banner .program-banner-content,
+.department-banner .department-content {
 	padding-top: 12rem;
 	color: #fff;
 }
 .blog-banner .blog-banner-content h1,
 .contact-banner .contact-banner-content h1,
+.vision-banner .vision-banner-content h1,
 .service-banner .service-banner-content h1,
 .notice-banner .notice-banner-content h1,
 .team-banner .team-banner-content h1,
-.program-banner .program-banner-content h1{
+.program-banner .program-banner-content h1,
+.department-banner .department-content h1{
 	font-size: 3rem;
 	font-weight: 600;
 	margin-bottom: 15px;
 }
 .blog-banner-content .breadcrumb-block .breadcrumb,
 .contact-banner-content .breadcrumb-block .breadcrumb,
+.vision-banner-content .breadcrumb-block .breadcrumb,
 .notice-banner-content .breadcrumb-block .breadcrumb,
 .service-banner-content .breadcrumb-block .breadcrumb,
 .team-banner-content .breadcrumb-block .breadcrumb,
-.program-banner-content .breadcrumb-block .breadcrumb {
+.program-banner-content .breadcrumb-block .breadcrumb,
+.department-content .breadcrumb-block .breadcrumb {
 	background: transparent;
 	margin-top: 20px;
 	padding: 0;
@@ -243,16 +343,19 @@ body{
 .notice-banner-content .breadcrumb-block .breadcrumb a,
 .service-banner-content .breadcrumb-block .breadcrumb a,
 .team-banner-content .breadcrumb-block .breadcrumb a,
-.program-banner-content .breadcrumb-block .breadcrumb a {
+.program-banner-content .breadcrumb-block .breadcrumb a,
+.department-content .breadcrumb-block .breadcrumb a {
 	color: #fff;
 	font-size: 14px;
 }
 .blog-banner-content .breadcrumb-block .breadcrumb a:hover,
 .contact-banner-content .breadcrumb-block .breadcrumb a:hover,
+.vision-banner-content .breadcrumb-block .breadcrumb a:hover,
 .notice-banner-content .breadcrumb-block .breadcrumb a:hover,
 .service-banner-content .breadcrumb-block .breadcrumb a:hover,
 .team-banner-content .breadcrumb-block .breadcrumb a:hover,
-.program-banner-content .breadcrumb-block .breadcrumb a:hover {
+.program-banner-content .breadcrumb-block .breadcrumb a:hover,
+.department-content .breadcrumb-block .breadcrumb a:hover {
 	color: rgb(206, 204, 204);
 	transition: all 0.4s ease-in-out;
 }
@@ -355,7 +458,8 @@ body{
 
 /* CONTACT PAGE */
 /* contactbanner */
-.contact-banner {
+.contact-banner,
+.vision-banner {
 	background-color: #f8f8f8;
 	background-size: cover;
 	background-position: center;
@@ -366,14 +470,17 @@ body{
 	font-family: 'Josefin Sans', sans-serif;
 	line-height: 30px;
 }
-.contact-banner .breadcrumb-block .breadcrumb {
+.contact-banner .breadcrumb-block .breadcrumb,
+.vision-banner .breadcrumb-block .breadcrumb {
 	display: inline-flex !important;
 }
-.contact-banner .contact-banner-content {
+.contact-banner .contact-banner-content,
+.vision-banner .vision-banner-content {
 	text-align: center;
 	color: #55565b !important;
 }
-.contact-banner-content .breadcrumb-block .breadcrumb a {
+.contact-banner-content .breadcrumb-block .breadcrumb a,
+.vision-banner-content .breadcrumb-block .breadcrumb a {
 	color: #55565b;
 	font-size: 16px;
 	font-weight: 500;
@@ -743,12 +850,23 @@ body{
 	border-radius: 1px;
 	margin: 30px 0;
 }
-.service-block .service-content .service-item h3{
+.service-block .serv-catt img {
+	width: 100%;
+	height: 200px;
+}
+.service-block .serv-catt {
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.service-block .serv-catt .service-detail {
+	padding: 30px;
+}
+.service-block .service-content h3{
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 1.3rem;
-	font-weight: 500;
+	font-weight: 700;
 	text-transform: uppercase;
 }
+.service-block .service-content .serv-catt a,
 .service-block .service-content .service-item a {
 	background-color: transparent;
 	border: 1px solid #212121;
@@ -801,4 +919,83 @@ body{
 	color: #f1f1f1;
 	padding: 15px 60px;
 	border-radius: 1px;
+}
+
+/* department */
+.department-banner {
+	background-image: url('http://placehold.jp/35/45464a/ffffff/1050x500.png?text=ESTER%20NEPAL');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: 500px;
+	font-family: 'Josefin Sans', sans-serif;
+	line-height: 30px;
+	border-bottom: 5px solid #25F4EE;
+}
+.rt {
+	border-bottom: 5px solid #ff6b6f !important;
+}
+.ep {
+	border-bottom: 5px solid #1b75ff;
+}
+.cd {
+	border-bottom: 5px solid #fee56f;
+}
+.academy-logo img,
+.research-logo img,
+.development-logo img,
+.creative-logo img {
+	width: 200px;
+	border-radius: 100%;
+	left: 45%;
+	position: absolute;
+	border: 5px solid #27f19d;
+}
+.research-logo img {
+	border: 5px solid #ff6b6f;
+}
+.development-logo img{
+	border: 5px solid #1b75ff;
+}
+.creative-logo img {
+	border: 5px solid #fee56f;
+}
+.department .department-content{
+	padding: 100px 0;
+	font-size: 1.2rem;
+	font-weight: 400;
+	text-align: justify;
+	line-height: 1.8;
+	background-color: #27f19d;
+}
+.department .department-content p {
+	padding: 30px;
+}
+.department .department-content span {
+	background-color: #fff;
+	font-size: 1.3rem;
+	padding: 10px 50px 10px 0;
+	border-radius: 0 50px 50px 0;
+	font-weight: 600;
+	font-family: 'Josefin Sans', sans-serif;
+	text-transform: uppercase;
+}
+.department .cd-txt {
+	background-color: #fee56f;
+}
+.department .ep-txt {
+	background-color: #1b75ff;
+}
+.department .rt-txt {
+	background-color: #ff6b6f;
+}
+.department .rt-txt p,
+.department .ep-txt p {
+	color: #fff;
+}
+.department img {
+	width: 100%;
+	margin-top: 20%;
 }
