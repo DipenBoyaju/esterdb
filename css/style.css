@@ -44,7 +44,7 @@ body{
 }
 
 /* index-about */
-.about-block .row{
+.about-block {
 	padding: 60px 0;
 }
 .about-block h2,
@@ -55,7 +55,9 @@ body{
 	font-weight: 700;
 }
 .about-block .text-wrap {
-	padding: 20% 0 0 15%;
+	padding-top: 20%;
+	z-index: 2;
+	position: relative;
 }
 .about-block .text-wrap p {
 	letter-spacing: 1.5px;
@@ -110,34 +112,87 @@ body{
 	transform: scale(1);
 	border-radius: 0;
 }
-.about-block .img-right{
-	padding-right: 0;
-}
 .about-block .img-wrap {
 	height: 500px;
 }
 .about-block .img-wrap img {
 	width: 100%;
-	border-radius: 80% 0 0 90%;
-	height: 100%;
+	border-radius: 80% 0 20% 90%;
+	height: 80%;
+	z-index: 2;
+	position: relative;
+	margin-top: 12%;
 }
-.about-block .text-lg-right {
+.about-block .img-wrap::before{
+	content: '';
+	height: 100%;
+	width: 50%;
+	background-color:#3a48a9;
+	position: absolute;
+	z-index: 0;
 	right: 0;
 }
-
+.about-block .shape {
+	content: '';
+	position: absolute;
+	z-index: 0;
+	height: 300px;
+	width: 300px;
+	background-color: rgba(224, 37, 140, 0.9);
+	left: 0;
+	border-radius: 100%;
+	margin-top: -15rem;
+	margin-left: -5rem;
+	overflow: hidden;
+	opacity: .8;
+}
 
 /* company-quote */
-.company-quote {
-	background-image: url('http://placehold.jp/35/45464a/ffffff/1050x500.png?text=ESTER%20NEPAL');
-	background-size: cover;
-	background-position: center;
+.ester {
 	position: relative;
-	z-index: 2;
 	width: 100%;
-	height: 500px;
+	height: 300px;
+  }
+.ester video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.ester .text {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	letter-spacing: 2px;
+	margin: 0px;
+	background-color: #fff;
+	display: grid;
+	place-content: center;
+	mix-blend-mode: screen;
+	text-transform: uppercase;
+}
+.ester .text h1 {
+	font-size: 18rem;
+	font-weight: 700;
+}
+.ester p {
+	font-size: 1.8rem;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.ester .sub-text {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #d8294f;
 }
 
 /* index-service */
+.sub-service {
+	padding: 130px 0 100px 0;
+}
 .sub-service .service-catt {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -173,6 +228,26 @@ body{
 	width: 100%;
 	height: 200px;
 }
+/* partner */
+.partners {
+	background-color: #212121;
+	padding-top: 60px;
+}
+.partners ul {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	align-content: space-around;
+	margin-bottom: 0;
+}
+.partners img{
+	width: 150px;
+}
+.partners ul li {
+	padding: 0 15px
+}
+
 /* footer */
 .footer {
 	background: #212121;
